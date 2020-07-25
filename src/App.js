@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const techUsed = ['node', 'docker', 'travis', 'aws'];
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +19,12 @@ function App() {
         >
           Learn React
         </a>
+        <div style={{ paddingTop: '20px' }}> Powered By: </div>
+        <ul style={{ textAlign: 'left' }}>
+          {techUsed.map(tech => (
+            <li key={tech}>{tech}</li>
+          ))}
+        </ul>
       </header>
     </div>
   );
